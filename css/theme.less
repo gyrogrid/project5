@@ -1,0 +1,450 @@
+@import "components/_variables.less";
+
+/*******************************************************
+CONTENTS
+
+01. BASE
+02. LAYOUT
+03. MODULES
+04. STATE
+
+This style sheet organization is based on the SMACCS 
+system. Please visit the following website for more info:
+http://smacss.com/
+
+--
+
+01. BASE
+
+All base HTML tags that require styling
+*********************************************************/
+
+body {
+  background: @primary-background;
+  font-family: @body-copy;
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  color: @primary-text; 
+  font-weight: 400; 
+}
+
+ul, ol {
+  margin-bottom: (@margin + 0.5);
+  margin-left: 0;
+}
+
+ul.unstyled,
+ul.inline {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ul.unstyled li {
+  list-style: none;
+}
+
+li {
+  line-height: @base-line-height;
+}
+
+ul.inline li {
+  margin-right: @margin;
+  display: inline-block;
+}
+
+ul.inline li.right {
+  margin-left: @margin;
+}
+
+a, a:link, a:visited {
+  color: @primary-link-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: @primary-link-color-hover;
+  text-decoration: underline;
+}
+
+p {
+  margin-bottom: (@font-size + 0.5);
+}
+
+hr {
+	margin: (@margin + 0.5) 0;
+	border-top: @border-size @border-type @border-color;
+	border-bottom: 0;
+}n
+
+.center {
+  text-align: center;
+}
+
+.leading {
+  margin-bottom: (@margin * 1.5);
+}
+
+/*******************************************************
+02. LAYOUT
+
+Styles specific to your layout or website
+*******************************************************/
+
+header {
+  margin-top: (@margin * 4);
+  margin-bottom: (@margin * 4);
+}
+
+.container {
+  padding: 0 (@padding * 2);
+}
+
+#carousel-portfolio {
+  background: @secondary-background;
+}
+
+#carousel-portfolio .carousel-inner {
+  text-align: center;
+}
+
+.portfolio-thumbs-wrapper-home {
+  margin-top: (@margin * 6);
+}
+
+.portfolio-thumbs-wrapper {
+  margin-top: (@margin * 2);
+}
+
+.portfolio-thumbs-wrapper h2 {
+  display: block;
+  margin-bottom: (@margin * 2);
+}
+
+.portfolio-thumbs {
+  margin-bottom: (@margin * 2);
+}
+
+.portfolio-thumbs img {
+  width: 100%;
+  height: auto;
+}
+
+.home-tagline {
+  margin-top: (@margin * 4);
+}
+
+.text-block h1,
+.text-block h2 {
+  display: block;
+  margin-bottom: @margin;
+}
+
+.image-block img {
+  width: 100%;
+  height: auto;
+  margin-top: (@margin * 2);
+  display: block;
+}
+
+.about-linkage {
+  margin-top: (@margin * 4) ;
+}
+
+.about-image {
+  margin-top: (@margin * 3);
+  padding-bottom: (@padding * 2);
+}
+
+.map-wrapper {
+  margin-top: (@margin * 4);
+  padding-bottom: (@padding * 2);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+}
+
+.archives-list {
+  margin-top: (@margin * 4);
+}
+
+.blog-roll {
+  margin-top: (@margin * 4);
+}
+
+.post {
+  padding-bottom: (@padding * 4);
+}
+
+.post-title h2 {
+  line-height: @base-line-height;
+}
+
+.post-body img {
+  margin-top: (@margin * 2);
+  padding-bottom: (@padding * 2);
+}
+
+.comment-form {
+  padding-bottom: (@padding * 4);
+}
+
+.comments-wrapper {
+  padding-bottom: (@padding * 4);
+}
+
+.comments-wrapper h2 {
+  padding-bottom: @padding;
+}
+
+.comment {
+  padding-bottom: (@padding * 1.5);
+}
+
+.comment-meta {
+  padding-bottom: @padding;
+}
+
+.comment.comment-child {
+  margin-left: (@margin * 4);
+}
+
+.pager {
+  text-align: left;
+  padding-bottom: (@padding * 3);
+}
+
+.footer-wrapper {
+  background: @inverse-background;
+  margin-top: (@margin * 6);
+}
+
+footer {
+  color: @inverse-text;
+  padding: (@padding * 4) 0;
+}
+
+footer h3 {
+  color: @inverse-text;
+}
+
+footer ul { 
+  margin-bottom: 0;
+}
+
+ul.credits li {
+  color: @grey;
+  font-size: (@font-size - 0.125);
+}
+
+ul.credits li.footer-title {
+  font-size: (@font-size + 0.5); /* 24px */
+  font-weight: 700;
+  color: @inverse-text
+}
+
+.social-media {
+  color: @inverse-text;
+  height: 2.125em;
+  line-height: 2.125em;
+  margin-top: 3px;
+}
+
+.social-media a {
+  color: @grey;
+}
+
+.social-media a:hover {
+  color: @white;
+}
+
+.social-media ul.inline li {
+  margin-right: 0;
+  margin-left: (@margin - 0.5);
+}
+
+
+/*******************************************************
+03. MODULES
+
+Reusable classes or components
+*******************************************************/
+
+@import "components/_typography.less";
+
+@import "components/_colors.less";
+
+@import "components/_forms.less"; 
+
+@import "components/_tables.less";
+
+@import "components/_buttons.less";
+
+@import "components/_icons.less";
+
+@import "components/_dropdown.less";
+
+@import "components/_tabs-pills.less";
+
+@import "components/_navbar.less";
+
+@import "components/_breadcrumb.less";
+
+@import "components/_pager.less";
+
+@import "components/_label-badge.less";
+
+@import "components/_jumbotron.less";
+
+@import "components/_progress-bars.less";
+
+@import "components/_thumbnails.less";
+
+@import "components/_list-group.less";
+
+@import "components/_panel.less";
+
+@import "components/_pagination.less";
+
+@import "components/_wells.less";
+
+@import "components/_tooltip.less";
+
+@import "components/_accordion.less";
+
+@import "components/_carousel.less";
+
+@import "components/_helpers.less";
+
+@import "components/_images.less";
+
+@import "components/_input-groups.less";
+
+@import "components/_media-object.less";
+
+@import "components/_modal.less";
+
+@import "components/_page-header.less";
+
+@import "components/_popover.less";
+
+@import "components/_scrollspy.less";
+
+@import "components/_thumb-hover.less";
+
+.divider {
+  border-top: @border-size @border-color @border-type;
+  margin-top: (@margin * 2);  
+}
+
+/*******************************************************
+04. STATES
+
+Changes in component state
+*******************************************************/
+
+@import "components/_alerts.less";
+
+@import "components/_form-validation.less";
+
+
+
+@media (max-width: 400px) {
+
+  img {
+    width: 80%;
+    height: auto;
+  }
+
+  .post-body img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+/* MOBILE STUFF */
+
+@media (max-width: 1024px) {
+  .social-media ul.pull-right,
+  ul.nav.navbar-nav.pull-right {
+    float: left!important;
+  }
+
+  .social-media ul.inline li:first-child {
+    margin-left: 0;
+  }
+
+  .portfolio-thumbs div:nth-child(1),
+  .portfolio-thumbs div:nth-child(2) {
+    margin-bottom: (@margin * 2);
+  }
+
+  div.navbar-collapse.navbar-responsive-collapse {
+    margin-top: @margin;
+    padding-top: @padding;
+  }
+
+  header {
+    margin-bottom: 0;
+  }
+
+  .navbar-collapse {
+    padding-left: 0;
+  }
+
+  .navbar-default .navbar-brand {
+    font-size: (@font-size * 2);
+  }
+
+  .navbar-toggle {
+    margin: 0;
+  }
+
+  .navbar-nav > li > a, 
+  .navbar-default .navbar-nav > li > a {
+    padding: (@padding - 0.5) 0;
+  }
+}
+
+@media (max-width: 1025px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-collapse.collapse.in {
+      display: block!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin: 7.5px -15px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+}
+
+/* FOR DEMO ONLY */
+
+#about #nav-about,
+#portfolio #nav-portfolio,
+#blog #nav-blog,
+#archives #nav-archives,
+#contact #nav-contact,
+#style-guide #nav-style-guide {
+  color: @black;
+}
+
